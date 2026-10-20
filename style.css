@@ -1,0 +1,80 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+} 
+
+header{
+    background-color: rgb(90, 90, 90);
+    /* ativa o CSS Grid para organizar os elementos */
+    display: grid;
+
+    /* 
+    CRIA DUAS COLUNAS
+    A PRIMEIRA OCUPA 1 FRAÇÃO  DO ESPAÇO DISPONIVEL
+    A SEGUNDA OCUPA 2 FRAÇÕES DOS ESPAÇOS DISPONIVEL
+    */
+    grid-template-columns: 1fr 2fr; /* define e desenha a quantidade de colunas */
+
+    align-items: center;
+}
+ nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* define 3 colunas */
+    gap: 15px;
+    justify-content: center;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+.pizza {
+    display: grid; /* ativa o display grid */
+    grid-template-columns: 1fr 1fr 1fr; /* define o numero de colunas */
+    gap: 20px;
+    padding: 20px; /* cria um espaço na seção */
+
+}
+
+.card{
+    background-color: rgb(219, 219, 219);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* RESPONSIVIDADE: É a capacidade de uma página da internet ou aplicativo ajustar automaticamente seu layout, imagens e elementos visuais para oferecer uma boa experiência de leitura e navegação em qualquer aparelho, como celulares, tablets, laptops e monitores grandes. */
+
+/* MEDIA QUERY  PARA TABLETS */
+
+@media (max-width:800px){
+    .pizza{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* MEDIA QUERY PARA CELULAR */
+@media(max-width:500px){
+    header{
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 15px;
+    }
+    nav{
+        justify-content: center;
+    }
+    .pizza{
+        grid-template-columns: 1fr;
+    }
+
+    
+}
